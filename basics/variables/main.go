@@ -25,4 +25,19 @@ func main() {
 	var weight float64 = 70.5
 	fmt.Println(weight)
 	fmt.Printf("Variable is of type: %T\n", weight)
+
+	// Default values
+	// bool: false
+	// int and uint: 0
+	// int8, int16, int32, int64: 0
+	// uint8, uint16, uint32, uint64, uintptr: 0
+	// float32 and float64: 0.0
+	// complex64 and complex128: (0 + 0i)
+	// string: ""
+	// error: nil
+	// struct, array, and slice: all of their elements are initialized to their zero values recursively
+
+	var foo = "bar"
+	fmt.Println(foo)
+	// foo = 3 will throw an error, type once decided won't change
 }
