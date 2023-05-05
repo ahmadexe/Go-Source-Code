@@ -40,4 +40,13 @@ func main() {
 	var foo = "bar"
 	fmt.Println(foo)
 	// foo = 3 will throw an error, type once decided won't change
+
+
+	// this si absolutely valid, walrus operator can change the type of variable on the fly. 
+	// The difference is in the way the type of the variable is inferred or specified. With the walrus operator, the type of the variable is inferred from the type of the expression on the right-hand side of the operator. With the var keyword, the type of the variable can be inferred from the initialization expression, or it can be explicitly specified using the type keyword.
+	// ! Can't use walrus operator outside of a function, on package level
+	foobar := "foobar"
+	fmt.Println(foobar)
+	foobar = "barfoo"
+	fmt.Println(foobar)
 }
