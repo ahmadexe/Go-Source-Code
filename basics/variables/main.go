@@ -15,4 +15,14 @@ func main() {
 	var age int = 20
 	fmt.Println(age)
 	fmt.Printf("Variable is of type: %T\n", age)
+
+	// upto 7 decimal points 
+	var height float32 = 1.75
+	fmt.Println(height)
+	fmt.Printf("Variable is of type: %T\n", height)
+
+	// upto 15 decimal points
+	var weight float64 = 70.5
+	fmt.Println(weight)
+	fmt.Printf("Variable is of type: %T\n", weight)
 }
