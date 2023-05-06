@@ -31,4 +31,27 @@ func main()  {
 	sort.Ints(num)
 	fmt.Println(num)
 	fmt.Println(sort.IntsAreSorted(num))
+
+	var techs = []string{"Golang", "Python", "Kotlin", "Swift", "Dart"}
+	fmt.Println(techs)
+	sort.Strings(techs)
+	fmt.Println(techs)
+	fmt.Println(sort.StringsAreSorted(techs))
+
+	// Removing elements
+	techs = append(techs[:1], techs[2:]...)
+	fmt.Println(techs)
+
+	// Remove last 
+	techs = techs[:len(techs)-1]
+
+	// Remove using name of element from a slice
+	for i, v := range techs {
+		if v == "Kotlin" {
+			techs = append(techs[:i], techs[i+1:]...)
+		}
+	}
+	fmt.Println(techs)
+
+
 }
