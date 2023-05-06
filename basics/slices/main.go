@@ -24,6 +24,7 @@ func main()  {
 	users = append(users, "Rizky Khaironi Putra Pratama Siahaan")
 	fmt.Println(users)
 
+	// if we do this [5] i.e provide a fixed length an array will be declared
 	var num []int = []int{1, 2, 3, 4, 5}
 	num = append(num, 0)
 	fmt.Println(num)
