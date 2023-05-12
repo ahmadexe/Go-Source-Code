@@ -6,11 +6,11 @@ import (
 	"net/http"
 )
 
-func main()  {
+func main() {
 	PerformGetReq()
 }
 
-func PerformGetReq()  {
+func PerformGetReq() {
 	const url string = "https://jsonplaceholder.typicode.com/posts"
 	res, err := http.Get(url)
 	if err != nil {
@@ -23,5 +23,4 @@ func PerformGetReq()  {
 		panic(err)
 	}
 	fmt.Println(string(content))
-
 }
