@@ -29,6 +29,41 @@ func EncodeJson() {
 	fmt.Printf("%s\n", string(prettyJson))
 }
 
+func DecodeJson() {
+	randJson := []byte(`
+	{
+		"name": "Flutter",
+		"price": 12,
+		"platform": "Udemy",
+		"tags": [
+				"flutter",
+				"mobile"
+		]
+	}`)
+
+	if (json.Valid(randJson)) {
+		var course course
+		err := json.Unmarshal(randJson, &course)
+		if err != nil {
+			panic(err)
+		}
+
+		fmt.Printf("%+v\n", course)
+	} else {
+		fmt.Println("Invalid JSON")
+	}
+
+	var someMap map[string]interface{}
+	err := json.Unmarshal(randJson, &someMap)
+	if err != nil {
+		panic(err)
+	} else {
+		fmt.Printf("%+v\n", someMap)
+	}
+
+}
+
 func main() {
-	EncodeJson()
+	// EncodeJson()
+	DecodeJson()
 }
